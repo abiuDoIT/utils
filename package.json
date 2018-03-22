@@ -1,0 +1,34 @@
+{
+  "name": "abiutils",
+  "version": "1.0.0",
+  "description": "常用工具库",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abiuDoIT/utils.git"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "util"
+  ],
+  "author": "abiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abiuDoIT/utils/issues"
+  },
+  "homepage": "https://github.com/abiuDoIT/utils#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.105",
+    "@types/node": "^9.4.7",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.1",
+    "typescript": "^2.7.2"
+  }
+}
