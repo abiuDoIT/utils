@@ -1,9 +1,10 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("lodash");
-const os = require("./os");
-const date = require("./date");
-let utils = _;
-Object.assign(utils, os);
-Object.assign(utils, date);
-module.exports = utils;
+exports._ = _;
+__export(require("./os"));
+__export(require("./date"));
 //# sourceMappingURL=index.js.map

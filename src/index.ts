@@ -1,8 +1,5 @@
-import * as _ from 'lodash';
-import * as os from './os';
-import * as date from './date';
+import  * as _ from 'lodash';
+export * from './os';
+export * from './date';
+export {_}
 
-let utils = _;
-Object.assign(utils,os);
-Object.assign(utils,date);
-export = utils;

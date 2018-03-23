@@ -1,6 +1,6 @@
 {
   "name": "abiutils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "常用工具库",
   "main": "dist/index.js",
   "scripts": {
