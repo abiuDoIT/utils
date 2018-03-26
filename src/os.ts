@@ -11,7 +11,6 @@ function mkdirs(file_path:string){
     return true;
 }
 
-
 function mv(oldPath:string, newPath:string) {
     mkdirs(path.dirname(newPath))
     return new Promise((res, rej) => {

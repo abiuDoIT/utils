@@ -9,7 +9,7 @@ function md5(text:string) :String{
     return crypto.createHash('md5').update(text).digest('hex').toLowerCase();
 }
 
-function date_format(date:Date,fmt:string) :String{ 
+function date_format(date:Date,fmt:string) :string{ 
     let o :{[propName: string]:number} = {
         "M+": date.getMonth() + 1, //月份 
         "D+": date.getDate(), //日 

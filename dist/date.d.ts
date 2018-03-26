@@ -1,5 +1,5 @@
 declare function md5(text: string): String;
-declare function date_format(date: Date, fmt: string): String;
+declare function date_format(date: Date, fmt: string): string;
 /**
  * get date at 00:00:00
  * @param d date to transform

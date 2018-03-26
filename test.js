@@ -1,7 +1,10 @@
 const _ = require('./dist')
 const path = require('path')
 
-console.log(_)
-console.log(_.get_ymd());
-console.log(_.random(20));
-console.log(_.mkdirs(path.resolve('./tt')));
+let csv = _.nlog("csv","YYYY-MM-DD_hh_mm",{debug:true});
+let aa = _.nlog("aa","YYYY-MM-DD_hh22",{extname:".aa",record_time:true});
+setInterval(function(){
+    let s = Date.now()+'';
+    csv(s);
+    aa(s);
+},1000)
