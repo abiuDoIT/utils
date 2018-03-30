@@ -39,4 +39,3 @@ function mv(oldPath, newPath) {
     });
 }
 exports.mv = mv;
-//# sourceMappingURL=os.js.map

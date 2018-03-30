@@ -9,4 +9,3 @@ __export(require("./os"));
 __export(require("./date"));
 const nlog_1 = require("./nlog");
 exports.nlog = nlog_1.default;
-//# sourceMappingURL=index.js.map

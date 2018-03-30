@@ -35,11 +35,7 @@ exports.date_format = date_format;
  * @param d date to transform
  * @param options {y:year+-,m:month+-,d:day+-}
  */
-function get_ymd(d = new Date(), options = {}) {
-    options.y = options.y || 0;
-    options.m = options.m || 0;
-    options.d = options.d || 0;
-    return new Date(d.getFullYear() + options.y, d.getMonth() + options.m, d.getDate() + options.d);
+function get_ymd(date = new Date(), { y = 0, m = 0, d = 0 } = { y: 0, m: 0, d: 0 }) {
+    return new Date(date.getFullYear() + y, date.getMonth() + m, date.getDate() + d);
 }
 exports.get_ymd = get_ymd;
-//# sourceMappingURL=date.js.map

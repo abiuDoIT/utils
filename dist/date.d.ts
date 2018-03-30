@@ -5,7 +5,7 @@ declare function date_format(date: Date, fmt: string): string;
  * @param d date to transform
  * @param options {y:year+-,m:month+-,d:day+-}
  */
-declare function get_ymd(d?: Date, options?: {
+declare function get_ymd(date?: Date, {y, m, d}?: {
     y?: number;
     m?: number;
     d?: number;

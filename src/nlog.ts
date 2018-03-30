@@ -35,12 +35,20 @@ class MyDate extends Date {
 
 let dnow: MyDate = new MyDate();
 
-setInterval(() => {
-    dnow = new MyDate();
-    register_logs.forEach((log)=>{
-        log.log.resetStream(get_file_path(log));
-    })
-}, 1000)
+let is_inited = false;
+function initInterval(){
+    if(!is_inited){
+        setInterval(() => {
+            dnow = new MyDate();
+            register_logs.forEach((log)=>{
+                log.log.resetStream(get_file_path(log));
+            })
+        }, 1000)
+        is_inited = true;
+    }
+    
+}
+
 
 
 class LogFile {
@@ -124,6 +132,7 @@ function register(type: string, timeFormat: string, options: IRegisterOpt = {}):
     if (typeof type !== 'string' || typeof timeFormat !== 'string') {
         throw "type and timeFormat is required string";
     }
+    initInterval();
     options.extname = options.extname || `.${type}.log`;
     let file_path_opt = { type, timeFormat, extname: options.extname };
     let log = new LogFile(get_file_path(file_path_opt));

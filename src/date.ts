@@ -36,12 +36,8 @@ function date_format(date:Date,fmt:string) :string{
  * @param d date to transform
  * @param options {y:year+-,m:month+-,d:day+-}
  */
-
-function get_ymd(d:Date=new Date(),options:{y?:number,m?:number,d?:number}={}):Date{
-    options.y = options.y||0;
-    options.m = options.m||0;
-    options.d = options.d||0;
-    return new Date(d.getFullYear()+options.y,d.getMonth()+options.m,d.getDate()+options.d);
+function get_ymd(date:Date=new Date(),{y=0,m=0,d=0}:{y?:number,m?:number,d?:number}={y:0,m:0,d:0}):Date{
+    return new Date(date.getFullYear()+y,date.getMonth()+m,date.getDate()+d);
 }
 
 export {md5,date_format,get_ymd}
