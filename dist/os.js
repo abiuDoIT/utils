@@ -27,8 +27,8 @@ function mv(oldPath, newPath) {
             res();
         });
         function copy() {
-            var readStream = fs.createReadStream(oldPath);
-            var writeStream = fs.createWriteStream(newPath);
+            const readStream = fs.createReadStream(oldPath);
+            const writeStream = fs.createWriteStream(newPath);
             readStream.on('error', rej);
             writeStream.on('error', rej);
             readStream.on('close', function () {

@@ -3,5 +3,5 @@ export * from './os';
 export * from './date';
 import nlog from './nlog';
 
-export {_,nlog}
+export {_, nlog};
 

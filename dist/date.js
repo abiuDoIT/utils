@@ -9,22 +9,22 @@ function md5(text) {
 }
 exports.md5 = md5;
 function date_format(date, fmt) {
-    let o = {
-        "M+": date.getMonth() + 1,
-        "D+": date.getDate(),
-        "h+": date.getHours(),
-        "m+": date.getMinutes(),
-        "s+": date.getSeconds(),
-        "q+": Math.floor((date.getMonth() + 3) / 3),
-        "S": date.getMilliseconds() //毫秒 
+    const o = {
+        'M+': date.getMonth() + 1,
+        'D+': date.getDate(),
+        'h+': date.getHours(),
+        'm+': date.getMinutes(),
+        's+': date.getSeconds(),
+        'q+': Math.floor((date.getMonth() + 3) / 3),
+        'S': date.getMilliseconds(),
     };
     if (/(Y+)/.test(fmt)) {
-        fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
+        fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));
     }
-    for (let k in o) {
-        if (new RegExp("(" + k + ")").test(fmt)) {
-            let v = o[k].toString();
-            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (v) : (("00" + v).substr((v.toString()).length)));
+    for (const k in o) {
+        if (new RegExp('(' + k + ')').test(fmt)) {
+            const v = o[k].toString();
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (v) : (('00' + v).substr((v.toString()).length)));
         }
     }
     return fmt;

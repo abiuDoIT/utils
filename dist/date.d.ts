@@ -1,4 +1,4 @@
-declare function md5(text: string): String;
+declare function md5(text: string): string;
 declare function date_format(date: Date, fmt: string): string;
 /**
  * get date at 00:00:00
